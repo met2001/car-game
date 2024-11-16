@@ -58,15 +58,17 @@ public class Player {
 
         }
     }
-    public void readData(){
+    public double readData(){
+        double score = 0;
         try{
             File playerFile = new File(this.filename);
             Scanner data = new Scanner(playerFile);
             while(data.hasNextLine()){
-                double score = data.nextDouble();
+                score = data.nextDouble();
             }
         }catch (Exception e){
             System.out.print(e);
         }
+        return score;
     }
 }
