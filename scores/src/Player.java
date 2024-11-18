@@ -2,12 +2,17 @@ import java.io.IOException;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
+import java.nio.file.Paths;
 
 public class Player {
     private double score = 0;
     private String playerName;
     private String filename;
 
+    public Player(){
+        this.playerName = "none";
+        this.score = 0;
+    }
     public Player(String playerName){
         this.playerName = playerName;
         this.filename = playerName + ".txt";
@@ -70,5 +75,30 @@ public class Player {
             System.out.print(e);
         }
         return score;
+    }
+    public double getPlayerData(){
+        try{
+            String currentDirectory = Paths.get("").toAbsolutePath().toString();
+            System.out.println("Current Directory: " + currentDirectory);
+            File curDir = new File(".");
+            for(File file : curDir.listFiles()){
+
+                if(file.getName().endsWith(".txt")){
+
+                    if(file.getName().equals(this.filename)){
+                        File player = new File(file.getName());
+                        Scanner data = new Scanner(player);
+                        while(data.hasNextLine()){
+                            return data.nextDouble();
+                        }
+                    }
+
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return 0;
     }
 }

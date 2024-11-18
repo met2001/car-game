@@ -1,12 +1,14 @@
+import java.util.Scanner;
 public class PlayerDriver{
 
     public static void main(String[] args){
+
         // creating a player object
         // score is defaulted to 0
-        Player playerOne = new Player(5,"player1");
-        Player playerTwo = new Player(10,"player2");
+        Player playerOne = new Player(10,"player1");
+        Player playerTwo = new Player(9,"player2");
         Player playerThree = new Player(1,"player3");
-        Player playerFour = new Player(9,"player4");
+        Player playerFour = new Player(6,"player4");
         Player[] playerArr = {playerOne, playerTwo, playerThree, playerFour};
 
         //Saves all player data
@@ -44,7 +46,14 @@ public class PlayerDriver{
         for(int i = 0; i < sortedArr.length; i++){
             System.out.println(sortedArr[i].getPlayerName() +": " +  sortedArr[i].getScore());
         }
-
+        double playerOneData = playerOne.getPlayerData();
+        double playerTwoData = playerTwo.getPlayerData();
+        double playerThreeData = playerThree.getPlayerData();
+        double playerFourData = playerFour.getPlayerData();
+        System.out.printf("%-10s%10.2f\n",playerOne.getPlayerName(), playerOneData);
+        System.out.printf("%-10s%10.2f\n",playerTwo.getPlayerName(), playerTwoData);
+        System.out.printf("%-10s%10.2f\n",playerThree.getPlayerName(), playerThreeData);
+        System.out.printf("%-10s%10.2f\n",playerFour.getPlayerName(), playerFourData);
     }
     // Uses bubblesort to sort in descending order
     public static Player[] sortPlayers(Player[] playerArr){
