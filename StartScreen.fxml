@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="554.0" style="-fx-background-image: &quot;C:\Users\EmmaSLaptop\OneDrive - UNC-Wilmington\CSC 331-002\road.jpg&quot;;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartScreenController">
+   <children>
+      <ImageView fitHeight="436.0" fitWidth="554.0" opacity="0.72" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.5" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@road.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="169.0" layoutY="90.0" prefHeight="255.0" prefWidth="254.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <SplitPane dividerPositions="0.13344594594594594" orientation="VERTICAL" prefHeight="255.0" prefWidth="254.0" style="-fx-border-color: black; -fx-background-color: lightgrey; -fx-border-width: 2px;">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: f0f0f0;">
+                     <children>
+                        <Label fx:id="leaderBoardLabel" alignment="CENTER" layoutX="71.0" layoutY="5.0" prefHeight="23.0" prefWidth="107.0" text="Leader Board" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Consolas Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="209.0" prefWidth="250.0">
+                     <children>
+                        <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="73.0" prefHeight="215.0" prefWidth="250.0" style="-fx-background-color: f0f0f0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="playerOneLabel" alignment="CENTER" prefHeight="17.0" prefWidth="125.0" text="Player 1">
+                                 <font>
+                                    <Font name="Consolas Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerTwoLabel" alignment="CENTER" prefHeight="17.0" prefWidth="125.0" text="Player 2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Consolas Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerThreeLabel" alignment="CENTER" prefHeight="17.0" prefWidth="125.0" text="Player 3" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Consolas Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerFourLabel" alignment="CENTER" prefHeight="17.0" prefWidth="125.0" text="Player 4" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Consolas Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerOneData" alignment="CENTER" prefHeight="17.0" prefWidth="130.0" text="--" GridPane.columnIndex="1" />
+                              <Label fx:id="playerTwoData" alignment="CENTER" prefHeight="17.0" prefWidth="131.0" text="--" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="playerThreeData" alignment="CENTER" prefHeight="17.0" prefWidth="137.0" text="--" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="playerFourData" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="--" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="startGameButton" focusTraversable="false" layoutX="151.0" layoutY="47.0" mnemonicParsing="false" onAction="#startGame" prefHeight="34.0" prefWidth="251.0" style="-fx-background-color: limegreen; -fx-border-color: black; -fx-border-width: 2px;" text="Start Game" textFill="WHITE" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="addPlayerButton" layoutX="151.0" layoutY="340.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: blue; -fx-border-color: black; -fx-border-width: 2px;" text="Add Player" textFill="WHITE" AnchorPane.bottomAnchor="40.0">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="changePlayerButton" layoutX="284.0" layoutY="340.0" mnemonicParsing="false" onAction="#changePlayer" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: blue; -fx-border-color: black; -fx-border-width: 2px;" text="Change Player" textFill="WHITE" AnchorPane.bottomAnchor="40.0">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
