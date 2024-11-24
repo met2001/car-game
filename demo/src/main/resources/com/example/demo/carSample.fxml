@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="plane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="554.0" style="-fx-background-color: a0ff89;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.CarControl">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="413.0" layoutX="77.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="77.0">
+         <image>
+            <Image url="@threeLaneRoad.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="timer" alignment="CENTER" editable="false" focusTraversable="false" layoutX="235.0" layoutY="14.0" prefHeight="31.0" prefWidth="83.0" style="-fx-border-color: black;" text="00.00">
+         <font>
+            <Font name="Cambria Math" size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="shape1" fitHeight="71.0" fitWidth="35.0" layoutX="260.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@blueCar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
